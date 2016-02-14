@@ -1,0 +1,21 @@
+---
+layout: default
+title: Understanding $LOAD_PATH
+permalink: load_path_blog
+---
+
+## What Is $LOAD_PATH (also known as $:)
+
+I have come across `$LOAD_PATH` many times and have always skipped over it, never quite understanding what it meant. Well, that is, until recently. The project that I am working on forced me to take a closer look. And once I did, like most things, it really wasn’t that difficult at all.
+
+The first thing to understand is what it refers to. Quite simply `$LOAD_PATH` is what Ruby uses to determine which directories to look in when you use `require` in your code. In other words, `$LOAD_PATH` contains nothing more than lots of directories. Easy, huh?
+
+The second thing you should know is how to reference it. You can refer to `$LOAD_PATH` in two ways. The first way is to simply call it by its name, `$LOAD_PATH`.
+
+The second way is to use the predefined variable, `$:`
+
+Both mean the exact same thing.
+
+Finally to see it in action, here is an example of adding a directory to `$LOAD_PATH`
+
+ `$: << File.expand_path('../', __FILE__)`

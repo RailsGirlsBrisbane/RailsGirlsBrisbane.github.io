@@ -93,7 +93,8 @@ nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 15px;
+  color: #040404;
   letter-spacing: 1px;
   margin-left: 15px;
 }
