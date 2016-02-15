@@ -101,7 +101,6 @@ nav a {
 
 nav a:after {
   margin-left: 15px;
-  content: url(../images/star.png);
 }
 
 nav a:last-child: after {

@@ -40,21 +40,17 @@
 
     </ul>
 </nav>
-        <p>Sorcha Abel @sabel25 and Rachelle LeQuesne @RachelleOnRails</p>
+        <h2>Rails Migrations</h2>
 
-<p>RubyConf 2016 has ended and all we can say is Wow! What a fantastic few days. Great talks, great people, and great social events all just down the road from us on the beautiful Gold Coast.</p>
+<p>Recently I came across an issue with a database migration that could easily have been avoided.</p>
 
-<p>This year for the first time we ran Rails Girls Next as one of the RubyConf workshops. We developed the course with the aim of demystifying Rails magic. This so-called magic is extremely helpful for an experienced web developer, but adds much confusion to a beginner trying to learn Rails.</p>
+<p>I was querying a database that contained a number of boolean NULL values. This is ambiguous, as it could mean false or it could simply mean that the value has never been set.</p>
 
-<p>We took the original Rails Girls Ideas app and built it from scratch using Sinatra. Instead of using Rails to generate the code for us, we did it manually. This allowed us to draw attention to important things such as routing, which is often just taken for granted when using Rails scaffolding.</p>
+<p>This scenario is easily avoided by simply setting your boolean to either true or false as a part of your migration. For example;</p>
 
-<p>We put together a detailed and newbie-friendly user guide which was written with simplicity and best practise in mind. Feedback has been hugely positive. We now have plans to add more exercises to the guide and will run the new and improved workshop in Brisbane later in the year.</p>
+<p><code>add_column :staff, :is_admin, :boolean, null: false, default: false</code></p>
 
-<p>We also ran the Rails Girls workshop at RubyConf which, as always, was a success. Cloud9 sponsored both events allowing us to use their fantastic IDE without issue. This year they also supplied us with some great swag. We saw many people wearing their awesome t-shirts throughout the conference. 😃</p>
-
-<p>We have launched a Rails Girls BNE blog, so let us start by saying hi everyone.</p>
-
-<p>We plan to focus on Ruby tips, Rails stuff, Sinatra, and everything in-between. We hope that our blogs will be pitched at the right level for a Ruby newbie. We encourage lots of comments and feedback so we can continue to blog about things you want to hear about.</p>
+<p>That&#39;s it! Easy right? It may not change your life but it will surely avoid a headache somewhere down the track.</p>
 
       </div>
     </article>
@@ -67,14 +63,14 @@
 
         <!-- Put this just before the closing body tag -->
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        <a href="http://railsgirlsnext.github.com/welcome_blog#disqus_thread" data-disqus-identifier="/welcome_blog"></a>
+        <a href="http://railsgirlsnext.github.com/migrations_blog#disqus_thread" data-disqus-identifier="/migrations_blog"></a>
         <!-- This is the actual comments section -->
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'erjjones'; // required: replace example with your forum shortname
-        var disqus_identifier = '/welcome_blog';
-        var disqus_url = 'http://erjjones.github.com/welcome_blog';
+        var disqus_identifier = '/migrations_blog';
+        var disqus_url = 'http://erjjones.github.com/migrations_blog';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
