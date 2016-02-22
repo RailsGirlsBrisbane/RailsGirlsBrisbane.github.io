@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Two Confusing RSpec Matchers
-permalink: rspec_matchers
+permalink: rspec_matchers_blog
 ---
 
 Sorcha Abel @sabel25 and Rachelle LeQuesne @RachelleOnRails
