@@ -4,6 +4,7 @@
     <list default="true" id="cfbf34a6-0b40-4960-a169-58c1ea7e8553" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/rspec_matchers_blog.html" afterPath="$PROJECT_DIR$/_site/rspec_matchers_blog.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/load_path_blog.html" afterPath="$PROJECT_DIR$/_site/load_path_blog.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/migrations_blog.html" afterPath="$PROJECT_DIR$/_site/migrations_blog.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/style.css" afterPath="$PROJECT_DIR$/_site/css/style.css" />
