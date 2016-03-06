@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Understanding $LOAD_PATH - Rails Girls</title>
+    <title>Welcome - Rails Girls</title>
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -41,21 +41,53 @@
         </li>
     </ul>
 </nav>
-        <h2>What Is $LOAD_PATH (also known as $:)</h2>
+        <h2>Keeping Rails RESTful</h2>
 
-<p>I have come across <code>$LOAD_PATH</code> many times and have always skipped over it, never quite understanding what it meant. Well, that is, until recently. The project that I am working on forced me to take a closer look. And once I did, like most things, it really wasn’t that difficult at all.</p>
+<p>Recently I decided to add a new download file feature to the Rails Girls Ideas app. It seemed like a straightforward task. But, upon opening the routes.rb file, I realised I there was more to this decision than I first thought. I had to decide on the <em>type</em> of route...should I create a member route or a resource route?</p>
 
-<p>The first thing to understand is what it refers to. Quite simply <code>$LOAD_PATH</code> is what Ruby uses to determine which directories to look in when you use <code>require</code> in your code. In other words, <code>$LOAD_PATH</code> contains nothing more than lots of directories. Easy, huh?</p>
+<h3>What is a Member Route</h3>
 
-<p>The second thing you should know is how to reference it. You can refer to <code>$LOAD_PATH</code> in two ways. The first way is to simply call it by its name, <code>$LOAD_PATH</code>.</p>
+<p>A member route simply adds an additional action to the enclosing resource.</p>
 
-<p>The second way is to use the predefined variable, <code>$:</code></p>
+<p>The example below adds a new <code>file</code> action to the existing ideas controller (ideas_controller.rb). In this case the file relates to a single idea. The url to access it would be something like <code>/ideas/1/file</code></p>
 
-<p>Both mean the exact same thing.</p>
+<p><em># routes.rb</em></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">resourses :ideas do
+  member do
+    get :file
+  end
+end
+</code></pre></div>
+<p><em># ideas_controller.rb</em></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class IdeasController &lt; ApplicationController
+  def file
+   # download code here
+  end
+end
+</code></pre></div>
+<p>However I started to think about what else I might need to do with the files: What if I want to add some more methods? What if I want to rename the file, or tag the file? What if I want to add a method to delete the file? And if I add all this new functionality, does it still belong in the ideas_controller?</p>
 
-<p>Finally to see it in action, here is an example of adding a directory to <code>$LOAD_PATH</code></p>
+<h2>Why a Resource Route</h2>
 
-<p><code>$: &lt;&lt; File.expand_path(&#39;../&#39;, __FILE__)</code></p>
+<p>In order to keep controllers from becoming bloated, you can put the new action into its own controller. Then if the situation arises where you want to extend the functionality of the controller and add methods such as upload/download/rename/tag/delete actions you are already in the right place.</p>
+
+<p><em># routes.rb</em></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">resources :ideas do
+  resource :file, only: [:show]
+end
+</code></pre></div>
+<p><em># creating the new method in its own controller</em></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">class FilesController &lt; ApplicationController do
+  def show
+    #download method
+  end
+end
+</code></pre></div>
+<p>The url to access it is still something like <code>/ideas/1/file</code>. The only difference lies in the fact that file is now an entity all of it&#39;s own and, as such, has it&#39;s own controller.</p>
+
+<p>Remember when in doubt type <code>rake routes</code> at the command line to find your way. It will show you the http verbs, the controller and corresponding action and also the url helpers</p>
+
+<p>I should point out that using a <em>resource route</em> is considered more RESTful than a member route. However understanding the difference is the key, as it will guide you in making an informed decision :)</p>
 
       </div>
     </article>
@@ -68,14 +100,14 @@
 
         <!-- Put this just before the closing body tag -->
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        <a href="http://railsgirlsnext.github.com/load_path_blog#disqus_thread" data-disqus-identifier="/load_path_blog"></a>
+        <a href="http://railsgirlsnext.github.com/restful_rails#disqus_thread" data-disqus-identifier="/restful_rails"></a>
         <!-- This is the actual comments section -->
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'erjjones'; // required: replace example with your forum shortname
-        var disqus_identifier = '/load_path_blog';
-        var disqus_url = 'http://erjjones.github.com/load_path_blog';
+        var disqus_identifier = '/restful_rails';
+        var disqus_url = 'http://erjjones.github.com/restful_rails';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
