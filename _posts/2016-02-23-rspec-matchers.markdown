@@ -4,13 +4,11 @@ title: Two Confusing RSpec Matchers
 permalink: rspec_matchers_blog
 ---
 
-Sorcha Abel @sabel25 and Rachelle LeQuesne @RachelleOnRails
+##1. Equality Matchers
 
 I have been working on an upgrade from Rails 2.3 to Rails 4.2. Along with the multitude of changes involved in such an undertaking, there is also the change from RSpec 2 to RSpec 3.
 
 Two things had me particularly confused, and caused many failing specs until I figured out why.
-
-##1. Equality Matchers
 
 RSpec offers no less than three similarly-names equality matchers: `eq`, `eql` and `equal`.
 
