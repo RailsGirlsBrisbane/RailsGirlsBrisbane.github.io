@@ -36,12 +36,12 @@
 
 .site-navigation li:hover {
 @include transition(background, 0.2s);
-    background: #d3360b;
+    background: #F98A8A;
     cursor: pointer;
 }
 
 .site-navigation ul li ul {
-    background: #d3360b;
+    background: #F03131;
     visibility: hidden;
     float: left;
     min-width: 150px;
