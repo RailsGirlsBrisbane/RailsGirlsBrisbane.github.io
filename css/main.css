@@ -51,7 +51,9 @@
     left: 0;
     z-index: 999;
 }
-
+.menu{
+    float: right
+}
 .site-navigation ul li:hover > ul,
 .site-navigation ul li ul:hover {
     visibility: visible;

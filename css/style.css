@@ -79,7 +79,7 @@ header {
 }
 
 header #logo {
-  width: 800px;
+  width: 400px;
   margin-bottom: 10px;
   float: left;
 }
@@ -136,6 +136,7 @@ footer a {
   list-style: none;
   margin: 0;
 }
+
 
 .home li {
   padding: 1.5em 0;
