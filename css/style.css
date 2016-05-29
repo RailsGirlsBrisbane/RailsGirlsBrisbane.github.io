@@ -79,13 +79,14 @@ header {
 }
 
 header #logo {
-  width: 400px;
+  width: 300px;
+  padding-left:0;
   margin-bottom: 10px;
   float: left;
 }
 
 nav {
-  margin: 0 0 0 250px;
+  margin: 0 0 0 200px;
   padding-top: 12px;
 }
 
@@ -101,7 +102,6 @@ nav a {
 
 nav a:after {
   margin-left: 15px;
-  content: url(../images/star.png);
 }
 
 nav a:last-child: after {
