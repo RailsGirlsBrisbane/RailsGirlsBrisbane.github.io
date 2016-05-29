@@ -284,8 +284,8 @@ i.icon-small-browser {
     background: #d3360b;
   }
   header #logo {
-    width: 65%;
-    height: 65%;
+    width: auto;
+    height: auto;
     float: left;
   }
   .menu{
