@@ -79,7 +79,7 @@ header {
 }
 
 header #logo {
-  width: 300px;
+  width: auto;
   padding-left:0;
   margin-bottom: 10px;
   float: left;
@@ -275,8 +275,8 @@ i.icon-small-browser {
 }
 
 /* Don't show the homepage image on mobile */
-@media (max-width: 480px) { 
-  .hero {
+@media (max-width: 480px) {
+  header, footer{
     padding: 20px 0;
     background:none;
   }
