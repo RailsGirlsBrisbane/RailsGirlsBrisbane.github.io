@@ -1,0 +1,21 @@
+---
+layout: default
+title: Welcome
+permalink: our_start
+---
+
+## Our Beginning
+
+RubyConf 2016 has ended and all we can say is Wow! What a fantastic few days. Great talks, great people, and great social events all just down the road from us on the beautiful Gold Coast.
+
+This year for the first time we ran Rails Girls Next as one of the RubyConf workshops. We developed the course with the aim of demystifying Rails magic. This so-called magic is extremely helpful for an experienced web developer, but adds much confusion to a beginner trying to learn Rails.
+
+We took the original Rails Girls Ideas app and built it from scratch using Sinatra. Instead of using Rails to generate the code for us, we did it manually. This allowed us to draw attention to important things such as routing, which is often just taken for granted when using Rails scaffolding.
+
+We put together a detailed and newbie-friendly user guide which was written with simplicity and best practise in mind. Feedback has been hugely positive. We now have plans to add more exercises to the guide and will run the new and improved workshop in Brisbane later in the year.
+
+We also ran the Rails Girls workshop at RubyConf which, as always, was a success. Cloud9 sponsored both events allowing us to use their fantastic IDE without issue. This year they also supplied us with some great swag. We saw many people wearing their awesome t-shirts throughout the conference. 😃
+
+We have launched a Rails Girls BNE blog, so let us start by saying hi everyone.
+
+We plan to focus on Ruby tips, Rails stuff, Sinatra, and everything in-between. We hope that our blogs will be pitched at the right level for a Ruby newbie. We encourage lots of comments and feedback so we can continue to blog about things you want to hear about.
