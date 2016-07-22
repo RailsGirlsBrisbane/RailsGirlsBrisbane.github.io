@@ -6,7 +6,7 @@ permalink: mvc_view
 
 ## MVC - View
 
-This is the second post in the series. Check out last weeks post on the [Model](http://railsgirlsbne.com/mvc_model) layer.
+This is the second post in the series. Check out last weeks post on the [MVC - Model](http://railsgirlsbne.com/mvc_model) layer.
 
 The V in MVC stands for view.
 
