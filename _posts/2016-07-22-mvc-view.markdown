@@ -22,4 +22,4 @@ We will need a page for each of the following:
 
 Each of these pages are referred to as a view in Rails-speak and belong in the View layer.
 
-A view in a Rails application contains both HTML and Ruby code. The file will have ".html.erb" as it's extension. The ".html" is self-explanatory: it, like every other web page, contains HTML. The ".erb" means that the file (possibly) contains embedded Ruby. This embedded Ruby allows us to include logic into an otherwise static HTML page.
+A view in a Rails application contains both HTML and Ruby code. The file will have `.html.erb` as it's extension. The `.html` is self-explanatory: it, like every other web page, contains HTML. The `.erb` means that the file (possibly) contains embedded Ruby. This embedded Ruby allows us to include logic into an otherwise static HTML page.
