@@ -1,0 +1,25 @@
+---
+layout: default
+title: MVC-View
+permalink: mvc_view
+---
+
+## MVC - View
+
+This is the second post in the series. Check out last weeks post on the [Model](http://railsgirlsbne.com/mvc_model) layer.
+
+The V in MVC stands for view.
+
+When we look at a web page what we are looking at is an HTML document.
+
+Every object in our web application will need a number of HTML documents associated with it. To continue with our shopping application from last week, let's take Product as an example.
+
+We will need a page for each of the following:
+* a listing of all the products available for purchase
+* detailed information about a single product
+* a page for entering a new product
+* a page for editing an existing product
+
+Each of these pages are referred to as a view in Rails-speak and belong in the View layer.
+
+A view in a Rails application contains both HTML and Ruby code. The file will have ".html.erb" as it's extension. The ".html" is self-explanatory: it, like every other web page, contains HTML. The ".erb" means that the file (possibly) contains embedded Ruby. This embedded Ruby allows us to include logic into an otherwise static HTML page.
