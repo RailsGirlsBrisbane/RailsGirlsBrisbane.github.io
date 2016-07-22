@@ -19,6 +19,39 @@ title: Rails Girls Brisbane Blog
     </div>
 <hr />
 
+<h3>Latest Blog Post...</h3>
+
+<h2>MVC - Model</h2>
+    <p>
+        We keep hearing MVC referred to when talking about Rails. But what does it really mean? Over the next three weeks we'll cover each component in detail.
+    </p>
+
+    <p>
+        The M in MVC stands for model.
+    </p>
+
+    <p>
+        Every web application that has anything other than very basic functionality will have a database behind it. And every object in our application will be represented by a table in that database.
+    </p>
+
+    <p>
+        So, for example, in a shopping website we will need to store information about our products and the customers who buy those products. Each time a Customer buys a Product it will generate a Transaction. This Transaction will also need to be stored in the database. So our database will have (at least) three tables: customers, products and transactions.
+    </p>
+
+    <p>
+        A model is that part of your Rails application whose job it is to talk to the underlying database. So, in our Rails application above, we will need to have three models: Customer, Product and Transaction.
+    </p>
+
+    <p>
+        When we need to obtain data about any of these three objects, we will ask the relevant model. That model will in turn ask the database.
+    </p>
+
+    <p>
+        Check out the next post in the series, <a href="http://railsgirlsbne.com/mvc_view">MVC - View</a>.
+    </p>
+
+<hr />
+
 <h3>About us</h3>
 
 <p>Hi and welcome to the Rails Girls BNE blog</p>
