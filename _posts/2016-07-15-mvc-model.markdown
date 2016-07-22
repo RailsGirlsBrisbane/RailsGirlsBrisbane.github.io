@@ -17,3 +17,5 @@ So, for example, in a shopping website we will need to store information about o
 A model is that part of your Rails application whose job it is to talk to the underlying database. So, in our Rails application above, we will need to have three models: Customer, Product and Transaction.
 
 When we need to obtain data about any of these three objects, we will ask the relevant model. That model will in turn ask the database.
+
+Check out the next post in the series, [MVC - View](http://railsgirlsbne.com/mvc_view).
