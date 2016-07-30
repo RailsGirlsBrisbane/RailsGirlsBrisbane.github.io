@@ -36,22 +36,24 @@
 
 .site-navigation li:hover {
 @include transition(background, 0.2s);
-    background: #d3360b;
+    background: #F98A8A;
     cursor: pointer;
 }
 
 .site-navigation ul li ul {
-    background: #d3360b;
+    background: #F03131;
     visibility: hidden;
     float: left;
-    min-width: 150px;
+   /* min-width: 150px;*/
     position: absolute;
     transition: visibility 0.65s ease-in;
     margin-top:12px;
     left: 0;
     z-index: 999;
 }
-
+.menu{
+    float: right
+}
 .site-navigation ul li:hover > ul,
 .site-navigation ul li ul:hover {
     visibility: visible;
