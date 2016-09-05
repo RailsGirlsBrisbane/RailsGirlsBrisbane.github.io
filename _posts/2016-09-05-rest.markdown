@@ -1,0 +1,38 @@
+---
+layout: default
+title: RESTful Rails
+permalink: restful_arch
+---
+
+## RESTful Constraints
+
+REST (representational state transfer) is a big topic so we won't attempt to cover it all in this post. Firstly, it's a very important topic 
+and secondly, we don't want to bore you with too much info. That's just not the Rails Girls style! :)
+
+This post will focus on the constraints of REST. We will cover the top four constraints. 
+
+#### 1st Constraint 
+
+**Client / Server:** We need to follow the client/server architecture. The purpose of the client is to make the request and the server to respond to it.
+
+#### 2nd Constraint
+**Stateless:** This means that the full interaction should be enclosed in the request and response exchange. For example, we 'request' a resource from the server and the response returns all the requested information in a single interaction.
+
+#### 3rd Constraint
+**Resources:** For any resource in our app, we should be able to access this resource via a stable url. For example, to get the `Idea` resource in our Rails Girls app, we used the url www.example.com/ideas. If we had a different app with a`Product` resource, we would use the url www.example.com/products.
+
+To comply with this constraint in a Rails app, simply define your resources in your `routes.rb` file by using either `resource` or `resources`. This will automatically give you all the standard RESTful routes with their corresponding standard urls.
+
+#### 4th Constraint
+**Manipulation through representations:** The manipulation part of this constraint refers to the HTTP verbs included in the request (GET, PUT, POST and DELETE). The representations parts refers to the different formats your rails app might respond with (eg. JSON, XML or HTML). We have a useful helper that we can use in our controllers for different responses:
+
+{% highlight sh %}
+respond_to do |format|
+  ..different formats
+end
+{% endhighlight %}
+
+The important point to note is that, regardless of the response format, the url stays the same. That's pretty impressive! 
+
+And that is our first high-level introduction to REST. We have more to cover over the coming weeks so stay tuned! To read more to get a better understanding we encourage you to 
+read this [resource](http://guides.rubyonrails.org/routing.html)

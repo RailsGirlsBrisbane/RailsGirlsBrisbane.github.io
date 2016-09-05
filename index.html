@@ -21,32 +21,53 @@ title: Rails Girls Brisbane Blog
 
 <h3>Latest Blog Post...</h3>
 
-<h2>Rails Girls Brisbane July 2016</h2>
-    <p>
-        Rails Girls 2016 has ended and wow what a weekend it was. We had fantastic sponsors, mentors, food, coffee, venue and possibly most of all amazing participants.
-    </p>
+<h2>RESTful Constraints Sept 2016</h2>
+<p>REST (representational state transfer) is a big topic so we won't attempt to cover it all in this post. Firstly, it's
+    a very important topic
+    and secondly, we don't want to bore you with too much info. That's just not the Rails Girls style! :) </p>
 
-    <p>
-        As always we built and deployed a web app as part of the Rails Girls Beginners track. This year we also ran a Rails Girls Next track which focused on exposing the magic of rails. To demonstrate this we built a sinatra app from the ground up!
-    </p>
+<p>This post will focus on the constraints of REST. We will cover the top four constraints.</p>
 
-    <p>
-        We had many presentations and talks all focused on the theme of demystifying Rails magic and we updated our user guides, making them even more user friendly than the previous ones.
-    </p>
+<h3>1st Constraint</h3>
 
-    <p>
-        Feeback so far has been really positive.
-    </p>
+<p><strong>Client / Server:</strong> We need to follow the client/server architecture. The purpose of the client is to make the request
+    and the server to respond to it.</p>
 
-    <p>
-        Thanks again for coming and we hope to see you all again soon :)
-    </p>
+<h3>2nd Constraint</h3>
+<p><strong>Stateless:</strong> This means that the full interaction should be enclosed in the request and response exchange. For example,
+    we 'request' a resource from the server and the response returns all the requested information in a single
+    interaction.</p>
 
-    <p>
-        <img src='images/fridayhug.jpg'/>
-    </p>
+<h3>3rd Constraint</h3>
+<p><strong>Resources:</strong> For any resource in our app, we should be able to access this resource via a stable url. For example, to
+    get the <strong>Idea</strong> resource in our Rails Girls app, we used the url `www.example.com/ideas`. If we had a
+    different app with a <strong>Product</strong> resource, we would use the url www.example.com/products.</p>
 
-   
+<p>To comply with this constraint in a Rails app, simply define your resources in your <strong>routes.rb</strong> file
+    by using either <strong>resource</strong> or <strong>resources</strong>. This will automatically give you all the
+    standard RESTful routes with their corresponding standard urls.
+
+<h3>4th Constraint</h3>
+<p><strong>Manipulation through representations:</strong> The manipulation part of this constraint refers to the HTTP verbs included in
+    the request (GET, PUT, POST and DELETE). The representations parts refers to the different formats your rails app
+    might respond with (eg. JSON, XML or HTML). We have a useful helper that we can use in our controllers for different
+    responses:
+
+    {% highlight sh %}
+    respond_to do |format|
+    ..different formats
+    end
+    {% endhighlight %}
+
+<p>The important point to note is that, regardless of the response format, the url stays the same. That's pretty
+    impressive!</p>
+
+<p>And that is our first high-level introduction to REST. We have more to cover over the coming weeks so stay tuned! To
+    read more to get a better understanding we encourage you to
+    read this <a href="http://guides.rubyonrails.org/routing.html">resource</a></p>
+
+
+
 <hr />
 
 <h3>About us</h3>
