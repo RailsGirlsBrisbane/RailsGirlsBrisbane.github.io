@@ -13,10 +13,10 @@ This post will focus on the constraints of REST. We will cover the top four cons
 
 #### 1st Constraint 
 
-**Client / Server:** We need to follow the client/server architecture. The purpose of the client is to make the request and the server to respond to it.
+**Client / Server:** We need to follow the client/server architecture. The purpose of the client is to make the request and the server to respond to it. Straightforward enough!
 
 #### 2nd Constraint
-**Stateless:** This means that the full interaction should be enclosed in the request and response exchange. For example, we 'request' a resource from the server and the response returns all the requested information in a single interaction.
+**Stateless:** This means that the full interaction should be enclosed in the request and response exchange. For example, we 'request' a resource from the server and the response returns all the requested information in a single interaction. Not too tricky either! 
 
 #### 3rd Constraint
 **Resources:** For any resource in our app, we should be able to access this resource via a stable url. For example, to get the `Idea` resource in our Rails Girls app, we used the url www.example.com/ideas. If we had a different app with a`Product` resource, we would use the url www.example.com/products.
