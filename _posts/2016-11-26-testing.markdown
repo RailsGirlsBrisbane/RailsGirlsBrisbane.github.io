@@ -1,0 +1,38 @@
+---
+layout: default
+title: Testing Overview
+permalink: testing_overview
+---
+
+## Hello Testing
+
+At Rails Girls we like to talk about tests. In fact, pretty much all Rails developers like to talk about tests!
+Why is this? Well, we understand how important they are to making your code as robust and error-free as possible. 
+But we also understand how confusing they can be..there seems to be so many different types of tests. We believe most things 
+in Ruby on Rails are only confusing because they haven't been explained properly. In this post we are going to **very simply** 
+explain tests. Once you understand what they are, the syntax isn't really that hard..trust us!
+
+### Unit Tests
+These tests are generally very quick and precise. They test at the method level and they generally test one single thing. An
+example might be testing that a specific data attribute has a valid value. A good rule of thumb is that whenever you add any new 
+feature you write a unit test for it.
+
+### Integration Tests
+
+These start one layer up from our unit tests and they test the underlying services. They are fantastic at telling you when 
+something is broken, however they are not as precise as unit tests in telling us exactly what is broken. A perfect example of an 
+Integration Test would be the testing of a valid and invalid login or perhaps connectivity to your database. The idea here is to 
+flag when something is wrong rather than the low level of detail that unit tests can give us.
+
+### User Interface Tests
+These tests are our end to end tests. They test the whole system and how it connects together with the UI. And in that sense they 
+are fab. It can be tempting to think all testing should be UI tests but this is not the case. UI tests are very slow and therefore 
+considered *expensive*. They can also be *flaky* which means that if something changes on the UI, even if it is just a new field, 
+it could 'break' your tests. Don't get us wrong, they are necessary and they have many benefits but use them sparingly.
+
+Now we know we have covered a lot in one post but we will chip away at each type of test over time. So if you take just one thing 
+from this post let it be this: when it comes to testing your app try to cover as much as possible with unit tests :)
+
+Sorcha & Rachelle
+
+

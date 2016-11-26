@@ -21,50 +21,38 @@ title: Rails Girls Brisbane Blog
 
 <h3>Latest Blog Post...</h3>
 
-<h2>RESTful Constraints Sept 2016</h2>
-<p>REST (representational state transfer) is a big topic so we won't attempt to cover it all in this post. Firstly, it's
-    a very important topic
-    and secondly, we don't want to bore you with too much info. That's just not the Rails Girls style! :) </p>
+<h2>Hello Testing</h2>
 
-<p>This post will focus on the constraints of REST. We will cover the top four constraints.</p>
+At Rails Girls we like to talk about tests. In fact, pretty much all Rails developers like to talk about tests!
+Why is this? Well, we understand how important they are to making your code as robust and error-free as possible.
+But we also understand how confusing they can be..there seems to be so many different types of tests. We believe most things
+in Ruby on Rails are only confusing because they haven't been explained properly. In this post we are going to <strong>very simply</strong>
+explain tests. Once you understand what they are, the syntax isn't really that hard..trust us!
 
-<h3>1st Constraint</h3>
+<h3>Unit Tests</h3>
+These tests are generally very quick and precise. They test at the method level and they generally test one single thing. An
+example might be testing that a specific data attribute has a valid value. A good rule of thumb is that whenever you add any new
+feature you write a unit test for it.
 
-<p><strong>Client / Server:</strong> We need to follow the client/server architecture. The purpose of the client is to make the request
-    and the server to respond to it. Straightforward enough!</p>
+<h3>Integration Tests</h3>
 
-<h3>2nd Constraint</h3>
-<p><strong>Stateless:</strong> This means that the full interaction should be enclosed in the request and response exchange. For example,
-    we 'request' a resource from the server and the response returns all the requested information in a single
-    interaction. Not too tricky either!</p>
+These start one layer up from our unit tests and they test the underlying services. They are fantastic at telling you when
+something is broken, however they are not as precise as unit tests in telling us exactly what is broken. A perfect example of an
+Integration Test would be the testing of a valid and invalid login or perhaps connectivity to your database. The idea here is to
+flag when something is wrong rather than the low level of detail that unit tests can give us.
 
-<h3>3rd Constraint</h3>
-<p><strong>Resources:</strong> For any resource in our app, we should be able to access this resource via a stable url. For example, to
-    get the <strong>Idea</strong> resource in our Rails Girls app, we used the url `www.example.com/ideas`. If we had a
-    different app with a <strong>Product</strong> resource, we would use the url www.example.com/products.</p>
-
-<p>To comply with this constraint in a Rails app, simply define your resources in your <strong>routes.rb</strong> file
-    by using either <strong>resource</strong> or <strong>resources</strong>. This will automatically give you all the
-    standard RESTful routes with their corresponding standard urls.
-
-<h3>4th Constraint</h3>
-<p><strong>Manipulation through representations:</strong> The manipulation part of this constraint refers to the HTTP verbs included in
-    the request (GET, PUT, POST and DELETE). The representations parts refers to the different formats your rails app
-    might respond with (eg. JSON, XML or HTML). We have a useful helper that we can use in our controllers for different
-    responses:
-
-    {% highlight sh %}
-    respond_to do |format|
-    ..different formats
-    end
-    {% endhighlight %}
-
-<p>The important point to note is that, regardless of the response format, the url stays the same. That's pretty
-    impressive!</p>
-
-<p>And that is our first high-level introduction to REST. We have more to cover over the coming weeks so stay tuned! To
-    read more to get a better understanding we encourage you to
-    read this <a href="http://guides.rubyonrails.org/routing.html">resource</a></p>
+<h3>User Interface Tests</h3>
+These tests are our end to end tests. They test the whole system and how it connects together with the UI. And in that sense they
+are fab. It can be tempting to think all testing should be UI tests but this is not the case. UI tests are very slow and therefore
+considered <i>expensive</i>. They can also be <i>flaky</i> which means that if something changes on the UI, even if it is just a new field,
+it could 'break' your tests. Don't get us wrong, they are necessary and they have many benefits but use them sparingly.
+<br/>
+<br />
+Now we know we have covered a lot in one post but we will chip away at each type of test over time. So if you take just one thing
+from this post let it be this: when it comes to testing your app try to cover as much as possible with unit tests :)
+<br/>
+<br/>
+Sorcha & Rachelle
 
 
 
